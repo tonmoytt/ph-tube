@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> abul</title>
+    <title> PH Hero tube</title>
+    <!-- deisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+       #divContainer .active {
+            background: red;
+            color: white;
+        }
+    </style>
 </head>
-<body>
+
+<body class=" m-8 lg:ml-20 lg:mr-20 lg:mt-20">
+    <header>
+        <div class="w-full lg:mx-auto md:flex lg:flex  justify-between">
+            <div class="text-center lg:none">
+                <img src="Repo/86-PHero-tube/Logo.png" alt="">
+            </div>
+           
+
+            <div class="text-center md:none lg:none">
+                <button class="mt-6 lg:mt-0  lg:text-lg px-7 btn btn-active btn-ghost">Sort by view</button>
+            </div>
+            <div class="text-center lg:none">
+                <button onclick="clickted()" id="clickedbtn" class="mt-6 lg:mt-0 text-center md:none lg:none btn text-lg btn-secondary">Blog</button>
+            </div>
+        </div>
+        </div>
+        <div>
+            
+        </div>
+        <hr class="mt-20">
+    </header>
+    <main>
+        <div id="divContainer">
+            <div class=" gap-5 text-center w-96 mx-auto  mt-10  ">
+                <!-- <button class=" btn btn-active text-xl">Ghost</button>
+          <button class=" btn btn-active text-xl">Ghost</button>
+          <button class=" btn btn-active text-xl">Ghost</button>
+          </div> -->
+            </div>
+            <!-- //btn div// -->
+            
+            </div>
+
+            <div>
+                <div id="allsection" class=>
+
+                </div>
+                </div>
+    </main>
+    <footer>
+        <div id="error-container"></div>
+    </footer>
+
+    <!--  js file -->
     <script src="javaScript/js.js"></script>
 </body>
+
 </html>
