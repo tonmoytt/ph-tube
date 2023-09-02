@@ -7,19 +7,12 @@ const handleOne = async () => {
    mainDiv.classList = "bg-gray-100 gap-5 lg:gap-10 text-xl text-center md:w-96 lg:w-96 md:mx-auto lg:mx-auto  mt-10 flex";
 
 
-   // if (data.data.length === 0) {
-   //    <div>
-      
-   //    </div>
-   // }
-
+    
    data.data.forEach((element) => {
       // console.log(element.category);
       //  cerate div  //
      
-   //    const div = document.createElement('div')
-   //    div.innerHTML = `<button key="${element.category_id}" onclick="onclickbtn('${element.category_id}')" >${element.category}</button>
-   //  `
+   
 const button = document.createElement("button");
 button.setAttribute("id", `${element.category_id}`);
 button.addEventListener('click', () => {
@@ -34,15 +27,16 @@ button.innerHTML = `${element.category}`
 const errorDiv = document.getElementById("error-container")
 const onclickbtn = async (element) => {
    console.log(element);
-   // const allCaterygory = mainDiv.queryselectorAll("button")
-   /* allCaterygory.foreach(cat => {
-      const key = cat.getAttribute('id')
-   if(element === key){
-      cat.classList.add('active')
-   }else {cat.classList.remove('active')}
-}) 
 
-*/ 
+//     const allCaterygory = mainDiv.queryselectorAll("button")
+//      allCaterygory.foreach(cat => {
+//       const key = cat.getAttribute('id')
+//     if(element === key){
+//        cat.classList.add('active')
+//    }else {cat.classList.remove('active')}
+//  }) 
+
+
    const allClick = await fetch(`https://openapi.programming-hero.com/api/videos/category/${element}`)
    const res2 = await allClick.json();
 
@@ -53,6 +47,7 @@ const onclickbtn = async (element) => {
 
    if(res2.data.length > 0){
       errorDiv.innerHTML = ""
+     
       res2.data.forEach((element) => {
 
          const cerate2 = document.createElement('div');
@@ -78,7 +73,7 @@ const onclickbtn = async (element) => {
        </div>
        <div  class="  ml-16 mt-2">
       
-       <p >${element.others.views}</p>
+       <p >${element.others.views} Views</p>
        </div>
      
     
@@ -91,6 +86,7 @@ const onclickbtn = async (element) => {
       });
    }else {
       const errorItem = document.createElement('div')
+      errorItem.textContent = '';
       errorItem.innerHTML = `  <div class="text-center text-5xl  mt-10">  
       <div class="text-center w-full mx-20 lg:mx-96 mb-10" > 
           <img  src='../img/icon.png'> </div> 
