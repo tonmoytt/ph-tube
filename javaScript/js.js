@@ -42,7 +42,7 @@ const onclickbtn = async (element) => {
 
    const allsection = document.getElementById('allsection');
    allsection.textContent = '';
-   allsection.classList = "card w-full gap-5 lg:gap-10 mt-10 bg-base-100 shadow-xl grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ";
+   allsection.classList = "card w-full gap-5 lg:gap-10 mt-10 bg-base-100 shadow-xl grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 ";
 
 
    if(res2.data.length > 0){
