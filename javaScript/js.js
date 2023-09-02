@@ -4,7 +4,7 @@ const handleOne = async () => {
    const data = await res.json();
    // call div container by id //
    
-   mainDiv.classList = "bg-gray-100 gap-5 lg:gap-10 text-xl text-center md:w-96 lg:w-96 md:mx-auto lg:mx-auto  mt-10 flex";
+   mainDiv.classList = "bg-gray-100 gap-5 lg:gap-10 text-lg lg:text-xl text-center w-full md:w-80 lg:w-96 md:mx-auto lg:mx-auto  mt-10 flex";
 
 
     
@@ -88,7 +88,7 @@ const onclickbtn = async (element) => {
       const errorItem = document.createElement('div')
       errorItem.textContent = '';
       errorItem.innerHTML = `  <div class="text-center text-5xl  mt-10">  
-      <div class="text-center w-full mx-20 lg:mx-96 mb-10" > 
+      <div class="text-center w-full mx-20 md:mx-72 lg:mx-96 mb-10" > 
           <img  src='../img/icon.png'> </div> 
          <h1>No Data Found</h1>
          </div>
